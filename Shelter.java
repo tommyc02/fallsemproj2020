@@ -201,7 +201,7 @@ public class Shelter
      * 
      * Date created: 11/17/2020
      */
-    public void StockStore()
+    public void stockStore()
     {
         Gift gift1 = new Gift("Collar", "These stylish collars make any animal look precious! (Comes in all Colors!)", 5.00);
         Gift gift2 = new Gift("Squeaky Toy", "They may be irritating to you, but your pets will love them!", 7.00);

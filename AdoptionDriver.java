@@ -29,7 +29,7 @@ public class AdoptionDriver
     {
         shelter = new Shelter("787 Windy Ln, Johnson City, TN 37614", "423-989-6201");
         shelter.populateShelter();
-        shelter.StockStore();
+        shelter.stockStore();
 
         int menuOptionChoice;
             
