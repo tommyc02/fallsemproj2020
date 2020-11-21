@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.text.DecimalFormat;
 import javax.swing.JOptionPane;
+import java.util.Random;
 
 /**
  * ------------------------------------------------------
@@ -294,6 +295,57 @@ public class Shelter
         JOptionPane.showMessageDialog(null, msg);
     
     } // viewGifts
+
+    /**
+     * Assigns a fact to a number. When the user
+     * chooses the Random Fact option on the menu,
+     * a one of the facts will be chosen and displayed on
+     * the screen at random.
+     * 
+     * Date created: 11/20/2020
+     */
+    public void randomFact()
+    {
+        Random rand = new Random();
+        int factNum;
+        factNum = rand.nextInt(8) + 1;
+
+        switch(factNum)
+        {
+            case 1:
+                JOptionPane.showMessageDialog(null, "Fun Fact" + " #" + factNum + ":" + 
+                                                " Connor is a very picky frog! He has a precise method to eat his food."
+                                                , "Fact about: Connor the Frog", JOptionPane.INFORMATION_MESSAGE);
+                break;
+            
+            case 2:
+                JOptionPane.showMessageDialog(null, "Fun Fact" + " #" + factNum + ":" + " Crista loves dumpster diving! "
+                                        , "Fact about: Crista the Possum", JOptionPane.INFORMATION_MESSAGE);
+                break;
+
+            case 3:
+                JOptionPane.showMessageDialog(null, "Fun Fact" + " #" + factNum + ":" + " 75% of Elliot's daily routine consists of sleeping! "
+                                        , "Fact about: Elliot the Cat", JOptionPane.INFORMATION_MESSAGE);
+                break;
+            
+            case 4:
+                JOptionPane.showMessageDialog(null, "Fun Fact" + " #" + factNum + ":" + " Arihant is the only penguin we've ever had brought in! "
+                                        , "Fact about: Arihant the Penguin", JOptionPane.INFORMATION_MESSAGE);
+                break;
+            
+            case 5:
+                JOptionPane.showMessageDialog(null, "Fun Fact" + " #" + factNum + ":" + " He isn't blue! Why do people keep asking?"
+                                        , "Fact about: Sonic the Hedgehog", JOptionPane.INFORMATION_MESSAGE);
+                break;
+
+            default:
+                JOptionPane.showMessageDialog(null, "Fun Fact" + " #" + factNum + ":" + " Almond is the name of the shelter owner's real dog! "
+                                        , "Fact about: Almond the Dog", JOptionPane.INFORMATION_MESSAGE);
+                break;
+
+        }
+    
+    } // end randomFact
 
     /**
      * Shows the user all of the items in

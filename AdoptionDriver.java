@@ -58,37 +58,60 @@ public class AdoptionDriver
     {
         String input;                  // This holds the input the user gives.
 
-            input = JOptionPane.showInputDialog("                 |            Welcome to Astro Animal Shelter!             |" +
-            "\n====================================================                                     " +
-            "\n| 1. Choose an Animal.                                                                   " +
+        input = JOptionPane.showInputDialog("                 |            Welcome to Astro Animal Shelter!             |" +
+            "\n====================================================\nThese are our current options:     " +
+            "\n\n| -----------------$ Shopping $-----------------                                       " +
+            "\n|\n| 1. Choose an Animal.                                                                " +
             "\n| 2. View the Animals!                                                                   " +
             "\n| 3. Purchase something from our Gift Shop!                                              " +
             "\n| 4. View our Gift Shop items.                                                           " +
-            "\n| 5. View our Shelter Information.                                                       " +
-            "\n| 6. View Selected Pets/Accessories.                                                     " +
-            "\n| 7. Take your new pet(s) and/or item(s) home! (Checkout)                                " +
+            "\n|\n| -----------------$ Shopping $-----------------                                      " +
+            "                                                                                           " +
+            "\n\n| -----------------♥ Info/More ♥----------------                                      " +
+            "\n|\n| 5. View our Shelter Information.                                                    " +
+            "\n| 6. View a random fact about our animals!                                               " +
+            "\n|\n| -----------------♥ Info/More ♥----------------                                     " +
+            "                                                                                           " +
+            "\n\n| ----------------✿ Checkout ✿----------------                                      " +
+            "\n|\n| 7. View Selected Pets/Accessories.                                                  " +
+            "\n| 8. Take your new pet(s) and/or item(s) home! (Checkout)                                " +
+            "\n|\n| ----------------✿ Checkout ✿----------------                                     " +
+            "\n\n| -----------------⇤⇥ Exit ⇤⇥-----------------                                      " +
             "\n| 0. Exit                                                                                " +
+            "\n| -----------------⇤⇥ Exit ⇤⇥-----------------                                        " +
             "\n=====================================================                                    " +
             "\nPlease select a menu option shown:");
 
         int option = Integer.parseInt(input);
+    
 
-        while(option < 0 || option > 7)     // this prevents invalid input
+        while(option < 0 || option > 8)     // this prevents invalid input
         {
             JOptionPane.showMessageDialog(null, "Please select a VALID Option.", "Uh oh!", JOptionPane.WARNING_MESSAGE);
 
-            input = JOptionPane.showInputDialog("                |           Welcome to Astro Animal Shelter!             |" +
-            "\n====================================================                                     " +
-            "\n| 1. Choose an Animal.                                                                   " +
-            "\n| 2. View the Animals!                                                                   " +
-            "\n| 3. Purchase something from our Gift Shop!                                              " +
-            "\n| 4. View our Gift Shop items.                                                           " +
-            "\n| 5. View our Shelter Information.                                                       " +
-            "\n| 6. View Selected Pets/Accessories.                                                     " +
-            "\n| 7. Take your new pet(s) and/or item(s) home! (Checkout)                                " +
-            "\n| 0. Exit                                                                                " +
-            "\n=====================================================                                    " +
-            "\nPlease select a menu option shown:");
+            input = JOptionPane.showInputDialog("                 |            Welcome to Astro Animal Shelter!             |" +
+                "\n====================================================\nThese are our current options:     " +
+                "\n\n| -----------------$ Shopping $-----------------                                       " +
+                "\n|\n| 1. Choose an Animal.                                                                " +
+                "\n| 2. View the Animals!                                                                   " +
+                "\n| 3. Purchase something from our Gift Shop!                                              " +
+                "\n| 4. View our Gift Shop items.                                                           " +
+                "\n|\n| -----------------$ Shopping $-----------------                                      " +
+                "                                                                                           " +
+                "\n\n| -----------------♥ Info/More ♥----------------                                       " +
+                "\n|\n| 5. View our Shelter Information.                                                    " +
+                "\n| 6. View a random fact about our animals!                                               " +
+                "\n|\n| -----------------♥ Info/More ♥----------------                                      " +
+                "                                                                                           " +
+                "\n\n| ----------------✿ Checkout ✿----------------                                        " +
+                "\n|\n| 7. View Selected Pets/Accessories.                                                  " +
+                "\n| 8. Take your new pet(s) and/or item(s) home! (Checkout)                                " +
+                "\n|\n| ----------------✿ Checkout ✿----------------                                       " +
+                "\n\n| -----------------⇤⇥ Exit ⇤⇥-----------------                                      " +
+                "\n| 0. Exit                                                                                " +
+                "\n| -----------------⇤⇥ Exit ⇤⇥-----------------                                         " +
+                "\n=====================================================                                    " +
+                "\nPlease select a menu option shown:");
 
             option = Integer.parseInt(input);
         }
@@ -130,10 +153,14 @@ public class AdoptionDriver
                 break;
             
             case 6:
-                shelter.viewCart();
+                shelter.randomFact();
                 break;    
             
             case 7:
+                shelter.viewCart();
+                break;
+
+            case 8:
                 shelter.checkOut();
                 break;
             
